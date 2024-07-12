@@ -1,12 +1,5 @@
 import {check, param} from 'express-validator';
 
-export const driverIdValidation = param('driverId')
-  .notEmpty()
-  .withMessage('Driver ID is required')
-  .isMongoId()
-  .withMessage('Invalid driver ID format')
-  .trim();
-
 // ..............................................................
 
 export const mongoIdValidation = param('_id')
@@ -86,3 +79,11 @@ export const emailValidation = check('email')
     }
     return true;
   });
+
+export const otpValidation = check('otp')
+  .notEmpty()
+  .withMessage('OTP is required')
+  .isNumeric()
+  .withMessage('OTP must be numeric')
+  .isLength({min: 6, max: 6})
+  .withMessage('OTP must be exactly 6 digits');

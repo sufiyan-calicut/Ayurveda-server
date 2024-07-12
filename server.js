@@ -11,6 +11,7 @@ import adminRouter from './routes/adminRouter.js';
 import userRouter from './routes/userRouter.js';
 
 const app = express();
+connection();
 dotenv.config();
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -28,5 +29,4 @@ app.use('/user', userRouter);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server started on ${process.env.PORT}`);
-  connection();
 });

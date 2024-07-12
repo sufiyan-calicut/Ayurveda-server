@@ -19,6 +19,7 @@ const UserSchema = new Schema({
   mobile: {
     type: String,
     required: true,
+    unique:true,
     trim: true,
     match: [/^\d{10}$/, 'Please enter a valid 10-digit mobile number']
   },
@@ -40,6 +41,6 @@ const UserSchema = new Schema({
   }
 });
 
-const User = mongoose.model('User', UserSchema);
+export const UserDB = mongoose.model('User', UserSchema);
 
-export default User;
+

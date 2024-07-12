@@ -1,21 +1,26 @@
 import express from 'express';
-import {createBanner, deleteBanner, getAllBanners, updateBanner, updateBannerStatus} from '../controllers/bannerController.js';
-import {validateBanner} from '../validators/bannerValidator.js';
-import {mongoIdValidator} from '../validators/mongoIdValidator.js';
-const router = express.Router();
+import {
+  createBanner,
+  deleteBanner,
+  getAllBanners,
+  updateBanner,
+  updateBannerStatus
+} from '../controllers/bannerController.js';
+import {validateMongoId, validateBanner} from '../validators/validator.js';
+
+const adminRouter = express.Router();
 
 // ...................................................BANNER RELATED ROUTES...........................................
 
-router.get('/banners',getAllBanners)
-router.post('/banners', validateBanner, createBanner);
-router.put(
+adminRouter.get('/banners', getAllBanners);
+adminRouter.post('/banners', validateBanner, createBanner);
+adminRouter.put(
   '/banners/:_id',
-  mongoIdValidator,
+
   validateBanner,
   updateBanner
 );
-router.delete('/banners/:_id',mongoIdValidator,deleteBanner);
-router.put('/banners/status/:_id', mongoIdValidator, updateBannerStatus);
+adminRouter.delete('/banners/:_id', validateMongoId, deleteBanner);
+adminRouter.put('/banners/status/:_id', validateMongoId, updateBannerStatus);
 
-
-export default router;
+export default adminRouter;
