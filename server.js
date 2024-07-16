@@ -24,8 +24,8 @@ app.use(logger('dev'));
 app.use(cookieParser());
 app.use(cors());
 
-app.use('/admin', adminRouter);
-app.use('/user', userRouter);
+app.use('/api/admin', adminRouter);
+app.use('/api/user', userRouter);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server started on ${process.env.PORT}`);

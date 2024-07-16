@@ -11,7 +11,7 @@ const userRouter = express.Router();
 
 // ................................AUTH RELATED ROUTES..................................................
 userRouter.post('/auth/signup', validateUser, userSignup);
-userRouter.post('/auth/signin', validateSignIn, signIn);
+userRouter.post('/auth/sign-in', validateSignIn, signIn);
 userRouter.get('/auth/resend-otp/:_id',validateMongoId, resendOtp);
 userRouter.post('/auth/verify-otp/:_id',validateOtp, verifyOtp);
 userRouter.post('/auth/forgot-password', validateEmail, forgotPassword);

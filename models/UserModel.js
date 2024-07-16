@@ -19,7 +19,6 @@ const UserSchema = new Schema({
   mobile: {
     type: String,
     required: true,
-    unique:true,
     trim: true,
     match: [/^\d{10}$/, 'Please enter a valid 10-digit mobile number']
   },
@@ -38,9 +37,11 @@ const UserSchema = new Schema({
     type: Boolean,
     default: false,
     required: true
+  },
+  isAdmin:{
+    type:Boolean,
+    default:false
   }
 });
 
 export const UserDB = mongoose.model('User', UserSchema);
-
-

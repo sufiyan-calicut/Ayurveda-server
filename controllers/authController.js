@@ -11,7 +11,7 @@ import {TempStorageDB} from '../models/TempStorageModel.js';
 
 export const userSignup = async (req, res) => {
   try {
-    const {email} = req.body;
+    const {email, mobile} = req.body;
 
     let user = await UserDB.findOne({email});
     if (user) {
@@ -138,8 +138,15 @@ export const signIn = async (req, res) => {
       return res.status(401).json({message: 'Incorrect Password'});
     }
 
-    const token = generateToken({id: user._id});
-    res.status(200).json({message: 'login Successful', token});
+    let userCredential = {_id: user._id};
+
+    if (user.isAdmin) {
+      userCredential.isAdmin = true;
+    }
+
+    const token = generateToken(userCredential);
+    let greeting = user.isAdmin ? 'login Successful!. Welcome to Admin Panel!': 'login Successful!';
+    res.status(200).json({message: greeting, token});
   } catch (error) {
     console.error('Error signing in user', error.message);
     res.status(500).json({message: 'Server error', error: error.message});
@@ -197,5 +204,3 @@ export const resetPassword = async (req, res) => {
       .json({message: `Internal Server Error:`, error: error.message});
   }
 };
-
-

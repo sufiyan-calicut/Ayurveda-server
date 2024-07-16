@@ -4,6 +4,9 @@
   "main": "server.js",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.config.mjs"
+  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
@@ -17,6 +20,6 @@
     "morgan": "^1.10.0",
     "nodemailer": "^6.9.14",
     "nodemon": "^3.1.4",
-    "redis": "^4.6.15"
+    "supertest": "^7.0.0"
   }
 }

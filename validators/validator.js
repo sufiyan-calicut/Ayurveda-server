@@ -53,11 +53,6 @@ export const validateEmail = async (req, res, next) => {
   await runValidation(req, res, next, rules);
 };
 export const validateBanner = async (req, res, next) => {
-  const rules = [
-    mongoIdValidation,
-    imageUrlValidation,
-    titleValidation,
-    descriptionValidation
-  ];
+  const rules = [imageUrlValidation, titleValidation, descriptionValidation];
   await runValidation(req, res, next, rules);
 };
