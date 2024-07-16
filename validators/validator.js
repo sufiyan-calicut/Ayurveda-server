@@ -48,6 +48,11 @@ export const validateMongoId = async (req, res, next) => {
   await runValidation(req, res, next, rules);
 };
 
+export const validateTopBar = async (req, res, next) => {
+  const rules = [titleValidation,descriptionValidation];
+  await runValidation(req, res, next, rules);
+}
+
 export const validateEmail = async (req, res, next) => {
   const rules = [emailValidation];
   await runValidation(req, res, next, rules);

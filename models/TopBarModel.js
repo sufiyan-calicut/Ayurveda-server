@@ -9,7 +9,9 @@ const topBarSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    isBlocked:false
+    isBlocked:{
+        type: Boolean,
+        default:false}
 },{timestamps:true});
 
 export const TopBarDB = mongoose.model('TopBar',topBarSchema);
