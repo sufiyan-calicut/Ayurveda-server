@@ -1,0 +1,566 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Ayurveda",
+    "collectionId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+    "dateExported": "2024-07-17T15:49:59.771Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "8045a31c-9ce4-4097-8f5e-38090d9a2752",
+            "name": "Admin",
+            "containerId": "",
+            "created": "2024-07-10T12:56:27.316Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "cf29896b-ac0b-4b0e-91ff-184a8d65f7e2",
+            "name": "User",
+            "containerId": "",
+            "created": "2024-07-10T12:57:09.613Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "ec389ff7-03ce-4aa9-b8f9-5cd031912ac9",
+            "name": "Banner",
+            "containerId": "cf29896b-ac0b-4b0e-91ff-184a8d65f7e2",
+            "created": "2024-07-10T13:06:25.626Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "99581a03-5e6e-4668-b6b2-ff015c5a2cea",
+            "name": "Banner",
+            "containerId": "8045a31c-9ce4-4097-8f5e-38090d9a2752",
+            "created": "2024-07-10T13:08:19.314Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "da6ce9b6-af15-431d-9b7a-193f5469a592",
+            "name": "Auth",
+            "containerId": "cf29896b-ac0b-4b0e-91ff-184a8d65f7e2",
+            "created": "2024-07-10T14:37:48.794Z",
+            "sortNum": 70000
+        },
+        {
+            "_id": "0f194eb7-4f26-4828-848a-f1f20ea825ff",
+            "name": "Auth",
+            "containerId": "8045a31c-9ce4-4097-8f5e-38090d9a2752",
+            "created": "2024-07-14T14:12:15.244Z",
+            "sortNum": 80000
+        },
+        {
+            "_id": "090c1f4e-1df5-407a-8714-21165467fd0c",
+            "name": "top bar",
+            "containerId": "8045a31c-9ce4-4097-8f5e-38090d9a2752",
+            "created": "2024-07-16T10:17:24.692Z",
+            "sortNum": 90000
+        },
+        {
+            "_id": "83db15d9-daa2-4dfb-8010-9ede9f1b4f18",
+            "name": "Top Bar",
+            "containerId": "cf29896b-ac0b-4b0e-91ff-184a8d65f7e2",
+            "created": "2024-07-16T11:10:49.333Z",
+            "sortNum": 100000
+        },
+        {
+            "_id": "d2e90d5e-3567-4eac-a50f-15e523f48497",
+            "name": "Product",
+            "containerId": "8045a31c-9ce4-4097-8f5e-38090d9a2752",
+            "created": "2024-07-16T11:42:39.745Z",
+            "sortNum": 110000
+        },
+        {
+            "_id": "1d4bdc40-c58d-472b-ab18-99ef1e1ee70f",
+            "name": "products",
+            "containerId": "cf29896b-ac0b-4b0e-91ff-184a8d65f7e2",
+            "created": "2024-07-16T12:53:28.496Z",
+            "sortNum": 120000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "b34f3e6e-df70-4020-ae79-ae114c777bef",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "ec389ff7-03ce-4aa9-b8f9-5cd031912ac9",
+            "name": "get banners",
+            "url": "http://localhost:3000/api/user/banners",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-07-10T13:06:57.074Z",
+            "modified": "2024-07-15T23:45:51.249Z",
+            "headers": []
+        },
+        {
+            "_id": "258e526a-7443-498a-97b7-1e0b6066f205",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "99581a03-5e6e-4668-b6b2-ff015c5a2cea",
+            "name": "get all banners",
+            "url": "http://localhost:3000/api/admin/banners",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-07-10T13:08:32.241Z",
+            "modified": "2024-07-16T09:25:33.971Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ]
+        },
+        {
+            "_id": "00742976-90c3-4dab-b728-475da0e37ba5",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "99581a03-5e6e-4668-b6b2-ff015c5a2cea",
+            "name": "update banner status",
+            "url": "http://localhost:3000/api/admin/banners/669639f053558bd99e37e723/status",
+            "method": "PATCH",
+            "sortNum": 120000,
+            "created": "2024-07-10T13:10:32.178Z",
+            "modified": "2024-07-16T09:24:39.981Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"imageUrl\": \"https://example.com/images/banner.png\",\n  \"title\": \"Sample Banner Title\",\n  \"description\": \"This is a sample description for the banner. this banner is updated for the fourth time\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "60c64650-0f6d-42c4-a468-2a17cec6cd31",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "99581a03-5e6e-4668-b6b2-ff015c5a2cea",
+            "name": "delete banners",
+            "url": "http://localhost:3000/api/admin/banners/669639f053558bd99e37e723",
+            "method": "DELETE",
+            "sortNum": 130000,
+            "created": "2024-07-10T13:11:29.690Z",
+            "modified": "2024-07-16T09:26:41.632Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjA5Njc1NDMsImV4cCI6MTcyNjE1MTU0M30.XKnsbxIkADUJrpz43xNY-NGNryUEH5yN4t09cUMbmf4"
+                }
+            ]
+        },
+        {
+            "_id": "d7d8b6fe-ef45-45b7-9474-dbfb2316ecb8",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "99581a03-5e6e-4668-b6b2-ff015c5a2cea",
+            "name": "update banner",
+            "url": "http://localhost:3000/api/admin/banners/669639f053558bd99e37e723",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2024-07-10T13:12:06.891Z",
+            "modified": "2024-07-16T09:22:29.483Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"imageUrl\": \"https://example.com/images/banner.png\",\n  \"title\": \"Updated test banner\",\n  \"description\": \"This is a updated version of sample description for the banner. this banner is updated for the fourth time\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "d8b41932-9b41-4f0f-a9a2-509499c81d3f",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "99581a03-5e6e-4668-b6b2-ff015c5a2cea",
+            "name": "add new banner",
+            "url": "http://localhost:3000/api/admin/banners",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2024-07-10T13:14:15.241Z",
+            "modified": "2024-07-16T00:55:57.593Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjEwOTA3NTcsImV4cCI6MTcyNjI3NDc1N30.a9W1qlOE6zXxPUlPEo9qiTziMfCwUzzph9rTY0RvbqA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"imageUrl\": \"https://example.com/images/testbanner.png\",\n  \"title\": \"test banner title\",\n  \"description\": \"test banner description\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "3b0c1649-5277-4035-afe0-a632555d22e9",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "da6ce9b6-af15-431d-9b7a-193f5469a592",
+            "name": "Signup / Register",
+            "url": "http://localhost:3000/api/user/auth/signup",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2024-07-10T14:38:15.893Z",
+            "modified": "2024-07-15T23:42:25.855Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Najwa\",\n  \"email\": \"najwamd2000@gmail.com\",\n  \"mobile\": \"9988454322\",\n  \"password\": \"NajwaPassword123\",\n  \"address\": \"123 Main Street, City, Country\"\n  \n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "5a13ec06-d693-4d01-a9ac-e3e62671e5d6",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "da6ce9b6-af15-431d-9b7a-193f5469a592",
+            "name": "verify otp",
+            "url": "http://localhost:3000/api/user/auth/verify-otp/6695b2b3e0b3c371866b0a1",
+            "method": "POST",
+            "sortNum": 170000,
+            "created": "2024-07-12T08:09:57.356Z",
+            "modified": "2024-07-15T23:41:04.408Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"otp\": 537141\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "3d47ce83-4f69-4587-a1b8-fa7010fd575d",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "da6ce9b6-af15-431d-9b7a-193f5469a592",
+            "name": "Resend otp",
+            "url": "http://localhost:3000/api/user/auth/resend-otp/66911675d65b6c912d9397a",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2024-07-12T11:04:22.719Z",
+            "modified": "2024-07-15T23:43:37.540Z",
+            "headers": []
+        },
+        {
+            "_id": "dbfb1b91-d541-4c68-9105-ee0c4b4b1949",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "da6ce9b6-af15-431d-9b7a-193f5469a592",
+            "name": "forget password",
+            "url": "http://localhost:3000/api/user/auth/forgot-password",
+            "method": "POST",
+            "sortNum": 190000,
+            "created": "2024-07-12T12:06:52.075Z",
+            "modified": "2024-07-15T23:45:08.199Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"email\":\"najwamd2000@gmail.com\"}",
+                "form": []
+            }
+        },
+        {
+            "_id": "dfbfd56e-6581-4c14-a5b4-40615fccc0f0",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "da6ce9b6-af15-431d-9b7a-193f5469a592",
+            "name": "Reset password",
+            "url": "http://localhost:3000/user/auth/reset-password/66911d2a01d4f37b4e61a0a3",
+            "method": "POST",
+            "sortNum": 200000,
+            "created": "2024-07-12T18:36:41.702Z",
+            "modified": "2024-07-12T18:52:07.902Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"password\":\"newPassword1\"\n  \n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b36fa436-53d4-42c4-af05-b8e208190afa",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "da6ce9b6-af15-431d-9b7a-193f5469a592",
+            "name": "Sign In / Log In",
+            "url": "http://localhost:3000/api/user/auth/sign-in",
+            "method": "POST",
+            "sortNum": 210000,
+            "created": "2024-07-12T18:44:38.506Z",
+            "modified": "2024-07-15T23:42:07.442Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"najwamd2000@gmail.com\",\n  \"password\": \"NajwaPassword123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "a449613c-d151-465b-ac6a-80fd3e8c52b1",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "0f194eb7-4f26-4828-848a-f1f20ea825ff",
+            "name": "Admin Sign In",
+            "url": "http://localhost:3000/api/admin/auth/sign-in",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2024-07-14T14:12:30.363Z",
+            "modified": "2024-07-14T16:03:17.916Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"admin@gmail.com\",\n  \"password\": \"AdminPassword123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "eeaee172-04dd-4a5f-a22a-81395cd17d2a",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "090c1f4e-1df5-407a-8714-21165467fd0c",
+            "name": "add topbar",
+            "url": "http://localhost:3000/api/admin/top-bar",
+            "method": "POST",
+            "sortNum": 240000,
+            "created": "2024-07-16T10:17:59.632Z",
+            "modified": "2024-07-16T10:58:51.116Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"sample topbar\",\n  \"description\": \"sample topbar description\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "82f33a3e-2073-4945-b543-362c71b7194e",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "090c1f4e-1df5-407a-8714-21165467fd0c",
+            "name": "fetch top bar data",
+            "url": "http://localhost:3000/api/admin/top-bar",
+            "method": "GET",
+            "sortNum": 250000,
+            "created": "2024-07-16T10:20:36.909Z",
+            "modified": "2024-07-16T10:51:28.080Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ]
+        },
+        {
+            "_id": "1c200bbf-b1de-427c-9886-838dd428e0ec",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "090c1f4e-1df5-407a-8714-21165467fd0c",
+            "name": "update top bar",
+            "url": "http://localhost:3000/api/admin/top-bar/6696526a5eb446ec0718c1d8",
+            "method": "PUT",
+            "sortNum": 260000,
+            "created": "2024-07-16T10:21:15.037Z",
+            "modified": "2024-07-16T11:16:06.729Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"sample topbar updated\",\n  \"description\": \"sample topbar description updated\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "228b0fe2-025e-415e-89af-a14c695f6434",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "090c1f4e-1df5-407a-8714-21165467fd0c",
+            "name": "update top bar status",
+            "url": "http://localhost:3000/api/admin/top-bar/6696526a5eb446ec0718c1d8/status",
+            "method": "PATCH",
+            "sortNum": 280000,
+            "created": "2024-07-16T10:22:41.277Z",
+            "modified": "2024-07-16T11:00:06.477Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ]
+        },
+        {
+            "_id": "b56e31c2-cb85-4dad-a8fa-86ae1bbcfad7",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "090c1f4e-1df5-407a-8714-21165467fd0c",
+            "name": "delete top bar",
+            "url": "http://localhost:3000/api/admin/top-bar/6696526a5eb446ec0718c1d8",
+            "method": "DELETE",
+            "sortNum": 290000,
+            "created": "2024-07-16T10:23:07.733Z",
+            "modified": "2024-07-16T11:18:47.924Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ]
+        },
+        {
+            "_id": "cceb35ec-a2e3-47fc-aae2-82b9e0b33f62",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "83db15d9-daa2-4dfb-8010-9ede9f1b4f18",
+            "name": "get top bar data",
+            "url": "http://localhost:3000/api/user/top-bar",
+            "method": "GET",
+            "sortNum": 300000,
+            "created": "2024-07-16T11:11:07.389Z",
+            "modified": "2024-07-16T11:12:42.459Z",
+            "headers": []
+        },
+        {
+            "_id": "a360716b-133d-4957-a748-2c63057ab975",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "d2e90d5e-3567-4eac-a50f-15e523f48497",
+            "name": "get products",
+            "url": "http://localhost:3000/api/admin/products",
+            "method": "GET",
+            "sortNum": 310000,
+            "created": "2024-07-16T11:42:57.842Z",
+            "modified": "2024-07-16T11:52:10.860Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ]
+        },
+        {
+            "_id": "c95ea216-129b-4322-8b2b-bbfae52c033b",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "d2e90d5e-3567-4eac-a50f-15e523f48497",
+            "name": "add new product",
+            "url": "http://localhost:3000/api/admin/products",
+            "method": "POST",
+            "sortNum": 320000,
+            "created": "2024-07-16T11:53:19.804Z",
+            "modified": "2024-07-16T21:39:31.598Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"productName\": \"Wireless Bluetooth Headphones\",\n  \"imageUrl\":\"https://example.com/images/headphones.jpg\" ,\n  \"description\": \"High-quality wireless Bluetooth headphones with noise cancellation and long battery life.\",\n  \"price\": 99.99,\n  \"category\": \"Electronics\",\n  \"quantity\": 50\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "046c31bf-1e63-465c-9d93-6f4f39ab9e38",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "1d4bdc40-c58d-472b-ab18-99ef1e1ee70f",
+            "name": "get products",
+            "url": "http://localhost:3000/api/user/products",
+            "method": "GET",
+            "sortNum": 330000,
+            "created": "2024-07-16T12:53:44.989Z",
+            "modified": "2024-07-16T12:55:07.652Z",
+            "headers": []
+        },
+        {
+            "_id": "7a120250-1627-4c69-8749-0fa1e30d5455",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "d2e90d5e-3567-4eac-a50f-15e523f48497",
+            "name": "Change product status",
+            "url": "http://localhost:3000/api/admin/products/6696ec1e81643c59c9871485/status",
+            "method": "PATCH",
+            "sortNum": 340000,
+            "created": "2024-07-16T12:55:43.907Z",
+            "modified": "2024-07-17T03:48:49.124Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ]
+        },
+        {
+            "_id": "a61b37c6-ea0a-45ad-af9d-f93c863cc025",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "d2e90d5e-3567-4eac-a50f-15e523f48497",
+            "name": "update products",
+            "url": "http://localhost:3000/api/admin/products/6696ec1e81643c59c9871485",
+            "method": "PUT",
+            "sortNum": 360000,
+            "created": "2024-07-16T12:59:14.923Z",
+            "modified": "2024-07-17T03:46:29.022Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"productName\": \"Wireless Bluetooth Headphones updated\",\n  \"imageUrl\": \"https://example.com/images/headphones.jpg\",\n  \"description\": \"updated High-quality wireless Bluetooth headphones with noise cancellation and long battery life.\",\n  \"price\": 100,\n  \"category\": \" updated Electronics\",\n  \"quantity\": 500\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "cafc68a6-2ff8-47b8-b036-d1f2dac28be5",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "d2e90d5e-3567-4eac-a50f-15e523f48497",
+            "name": "change product quantity",
+            "url": "http://localhost:3000/api/admin/products/6696ec1e81643c59c9871485/quantity",
+            "method": "PATCH",
+            "sortNum": 370000,
+            "created": "2024-07-17T03:51:56.534Z",
+            "modified": "2024-07-17T04:06:37.999Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkzOWE5MGZlOGE4N2I2MThjN2U3ODYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjExMjE0NTksImV4cCI6MTcyNjMwNTQ1OX0.oEh80lvRDvirvSSlLISyYNRH4vBtEA5-b2MBhDoC0vA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\"quantity\":24}",
+                "form": []
+            }
+        },
+        {
+            "_id": "13be00a9-7ebc-49be-a3c9-bd1bb0d6b9bd",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "d2e90d5e-3567-4eac-a50f-15e523f48497",
+            "name": "delete product",
+            "url": "http://localhost:3000/api/admin/products/6696ec8cbbfbba2cde3224c2",
+            "method": "DELETE",
+            "sortNum": 380000,
+            "created": "2024-07-17T04:08:42.787Z",
+            "modified": "2024-07-17T08:22:04.154Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njk3N2YwM2ZlOTA5Zjg1N2VjMDAyYjkiLCJuYW1lIjoiQWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTIwNDQ5NiwiZXhwIjoxNzI2Mzg4NDk2fQ.jReYaPytEacMPDouKOjYsJkx0VqsetsRBeFtPFQmQPk"
+                }
+            ]
+        },
+        {
+            "_id": "01db9bfb-af89-4483-b499-1f8fd8978fef",
+            "colId": "d3c62068-c104-4fd5-895f-60a563bc96be",
+            "containerId": "1d4bdc40-c58d-472b-ab18-99ef1e1ee70f",
+            "name": "add rating",
+            "url": "http://localhost:3000/api/user/products/rating/6696ec1e81643c59c9871485",
+            "method": "POST",
+            "sortNum": 390000,
+            "created": "2024-07-17T08:27:48.016Z",
+            "modified": "2024-07-17T15:05:06.568Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njk1YjJmMGUwYjNjMzU3MTg2NmIwYTUiLCJuYW1lIjoiTmFqd2EiLCJlbWFpbCI6Im5handhbWQyMDAwQGdtYWlsLmNvbSIsImlhdCI6MTcyMTIyODY1MCwiZXhwIjoxNzI2NDEyNjUwfQ.NjELbUAQqCEWr1_cqZ7h-FoHtW4slfZdzlEMc1ZnUl0"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\"rating\":4,\"review\":\"test the review\"}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "G4p7Bl-zCMSt77KLezVm2uARcJ4xQJsVuYp5NzA-NoNKZIxDhmF585UbUr0fJ1VkySBVb7FzgTey_mOjpROanw"
+}
