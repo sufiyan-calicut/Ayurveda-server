@@ -6,11 +6,12 @@ import {
   updateBanner,
   updateBannerStatus
 } from '../controllers/bannerController.js';
-import {validateMongoId, validateBanner, validateSignIn, validateTopBar} from '../validators/validator.js';
+import {validateMongoId, validateBanner, validateSignIn, validateTopBar, validateProduct} from '../validators/validator.js';
 import { adminTokenVerify, isAdmin, verifyToken } from '../middlewares/auth.js';
 import { signIn } from '../controllers/authController.js';
 import { mongoIdValidation } from '../validators/validationRules.js';
 import { addTopBar, getTopBar, removeTopBar, updateTopBar, updateTopBarStatus } from '../controllers/topBarController.js';
+import { createProduct, deleteProduct, getAllProducts, updateProduct, updateProductQuantity, updateProductStatus } from '../controllers/productController.js';
 
 const adminRouter = express.Router();
 
@@ -41,4 +42,13 @@ adminRouter.put('/top-bar/:_id',adminTokenVerify,validateMongoId,validateTopBar,
 adminRouter.patch('/top-bar/:_id/status',adminTokenVerify,validateMongoId,updateTopBarStatus)
 adminRouter.delete('/top-bar/:_id',adminTokenVerify,validateMongoId,removeTopBar)
 
+
+// ...........................................PRODUCT-RELATED_ROUTES..........................................
+
+adminRouter.get('/products',adminTokenVerify,getAllProducts)
+adminRouter.post('/products',adminTokenVerify,validateProduct,createProduct)
+adminRouter.put('/products/:_id',adminTokenVerify,validateProduct,updateProduct)
+adminRouter.patch('/products/:_id/status',adminTokenVerify,validateMongoId,updateProductStatus)
+adminRouter.patch('/products/:_id/quantity',adminTokenVerify,validateMongoId,updateProductQuantity)
+adminRouter.delete('/products/:_id',adminTokenVerify,deleteProduct)
 export default adminRouter;

@@ -1,9 +1,11 @@
 import express from 'express';
 import {getNonBlockedBanners} from '../controllers/bannerController.js';
 import {forgotPassword, resendOtp, resetPassword, signIn, userSignup, verifyOtp} from '../controllers/authController.js';
-import { validateEmail, validateMongoId, validateOtp, validatePassword, validateSignIn, validateUser } from '../validators/validator.js';
+import { validateEmail, validateMongoId, validateOtp, validatePassword, validateRating, validateSignIn, validateUser } from '../validators/validator.js';
 import { emailValidation, mongoIdValidation } from '../validators/validationRules.js';
 import { getTopBar } from '../controllers/topBarController.js';
+import { addRatingAndReview, getAllProducts } from '../controllers/productController.js';
+import { verifyToken } from '../middlewares/auth.js';
 
 const userRouter = express.Router();
 
@@ -25,5 +27,9 @@ userRouter.get('/top-bar',getTopBar)
 
 // ...............................BANNER-RELATED-ROUTES..................................................
 userRouter.get('/banners', getNonBlockedBanners);
+
+userRouter.get('/products', getAllProducts)
+userRouter.post('/products/rating/:_id',verifyToken,validateRating, addRatingAndReview)
+
 
 export default userRouter;

@@ -19,6 +19,7 @@ export const verifyToken = async (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
+    console.log(decoded,'decoded')
   } catch (err) {
     console.error(err);
     return res.status(401).json({message: 'Invalid token', error: err});

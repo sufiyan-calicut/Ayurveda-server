@@ -1,4 +1,4 @@
-import {response} from 'express';
+
 import BannerDB from '../models/BannerModel.js';
 
 // ......................................GET ALL BANNERS (admin)....................................................

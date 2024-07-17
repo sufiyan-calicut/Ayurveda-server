@@ -15,7 +15,7 @@ export const imageUrlValidation = check('imageUrl')
   .isURL()
   .withMessage('Invalid URL format')
   .trim()
-  .escape();
+  
 
 export const titleValidation = check('title')
   .notEmpty()
@@ -87,3 +87,46 @@ export const otpValidation = check('otp')
   .withMessage('OTP must be numeric')
   .isLength({min: 6, max: 6})
   .withMessage('OTP must be exactly 6 digits');
+
+
+  export const productNameValidation = check('productName')
+  .notEmpty()
+  .withMessage('Product name is required')
+  .isString()
+  .withMessage('Product name must be a string')
+  .trim();
+
+
+  export const priceValidation = check('price')
+  .notEmpty()
+  .withMessage('Price is required')
+  .isFloat({ gt: 0 })
+  .withMessage('Price must be a number greater than 0')
+  .toFloat();
+
+  export const categoryValidation = check('category')
+  .notEmpty()
+  .withMessage('Category is required')
+  .isString()
+  .withMessage('Category must be a string')
+  .trim();
+
+  export const quantityValidation = check('quantity')
+  .notEmpty()
+  .withMessage('Quantity is required')
+  .isInt({ gt: -1 })
+  .withMessage('Quantity must be an integer greater than or equal to 0')
+  .toInt();
+
+
+  export const ratingValidation = check('rating')
+  .optional()
+  .isFloat({ min: 1, max: 5 })
+  .withMessage('Rating must be a number between 1 and 5')
+  .toFloat();
+
+  export const reviewValidation = check('review')
+  .optional()
+  .isString()
+  .withMessage('Review must be a string')
+  .trim();

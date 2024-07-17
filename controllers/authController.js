@@ -138,14 +138,16 @@ export const signIn = async (req, res) => {
       return res.status(401).json({message: 'Incorrect Password'});
     }
 
-    let userCredential = {_id: user._id};
+    let userCredential = {_id: user._id, name: user.name, email: user.email};
 
     if (user.isAdmin) {
       userCredential.isAdmin = true;
     }
 
     const token = generateToken(userCredential);
-    let greeting = user.isAdmin ? 'login Successful!. Welcome to Admin Panel!': 'login Successful!';
+    let greeting = user.isAdmin
+      ? 'login Successful!. Welcome to Admin Panel!'
+      : 'login Successful!';
     res.status(200).json({message: greeting, token});
   } catch (error) {
     console.error('Error signing in user', error.message);

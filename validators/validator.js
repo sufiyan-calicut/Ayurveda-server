@@ -8,6 +8,11 @@ import {
   nameValidation,
   otpValidation,
   passwordValidation,
+  priceValidation,
+  productNameValidation,
+  quantityValidation,
+  ratingValidation,
+  reviewValidation,
   titleValidation
 } from './validationRules.js';
 import {runValidation} from './runValidation.js';
@@ -49,9 +54,9 @@ export const validateMongoId = async (req, res, next) => {
 };
 
 export const validateTopBar = async (req, res, next) => {
-  const rules = [titleValidation,descriptionValidation];
+  const rules = [titleValidation, descriptionValidation];
   await runValidation(req, res, next, rules);
-}
+};
 
 export const validateEmail = async (req, res, next) => {
   const rules = [emailValidation];
@@ -61,3 +66,24 @@ export const validateBanner = async (req, res, next) => {
   const rules = [imageUrlValidation, titleValidation, descriptionValidation];
   await runValidation(req, res, next, rules);
 };
+
+export const validateProduct = async (req, res, next) => {
+  const rules = [
+    productNameValidation,
+    imageUrlValidation,
+    descriptionValidation,
+    priceValidation,
+    quantityValidation
+  ];
+  await runValidation(req, res, next, rules);
+};
+
+
+export const validateRating = async (req, res, next) => {
+  const rules = [
+    ratingValidation,
+    reviewValidation
+  ]
+
+  await runValidation(req, res, next, rules);
+}
